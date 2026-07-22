@@ -318,6 +318,6 @@ For a production-ready implementation, I would consider:
 
 ## AI Usage
 
-ChatGPT was used as a development assistant to review implementation ideas, discuss architectural trade-offs, improve documentation and identify potential edge cases.
+Github Copilot and ChatGPT was used as a development assistant to review implementation ideas, discuss architectural trade-offs, improve documentation and identify potential edge cases.
 
 All design decisions, implementation, debugging, testing, and final code changes were reviewed and completed by the author.
