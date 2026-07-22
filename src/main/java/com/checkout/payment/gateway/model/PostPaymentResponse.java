@@ -1,16 +1,20 @@
 package com.checkout.payment.gateway.model;
 
 import com.checkout.payment.gateway.enums.PaymentStatus;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class PostPaymentResponse {
   private UUID id;
   private PaymentStatus status;
-  private int cardNumberLastFour;
+  @JsonProperty("card_number_last_four")
+  private String cardNumberLastFour;
+  @JsonProperty("expiry_month")
   private int expiryMonth;
+  @JsonProperty("expiry_year")
   private int expiryYear;
   private String currency;
-  private int amount;
+  private long amount;
 
 
   public UUID getId() {
@@ -29,11 +33,11 @@ public class PostPaymentResponse {
     this.status = status;
   }
 
-  public int getCardNumberLastFour() {
+  public String getCardNumberLastFour() {
     return cardNumberLastFour;
   }
 
-  public void setCardNumberLastFour(int cardNumberLastFour) {
+  public void setCardNumberLastFour(String cardNumberLastFour) {
     this.cardNumberLastFour = cardNumberLastFour;
   }
 
@@ -61,17 +65,17 @@ public class PostPaymentResponse {
     this.currency = currency;
   }
 
-  public int getAmount() {
+  public long getAmount() {
     return amount;
   }
 
-  public void setAmount(int amount) {
+  public void setAmount(long amount) {
     this.amount = amount;
   }
 
   @Override
   public String toString() {
-    return "GetPaymentResponse{" +
+    return "PostPaymentResponse{" +
         "id=" + id +
         ", status=" + status +
         ", cardNumberLastFour=" + cardNumberLastFour +
