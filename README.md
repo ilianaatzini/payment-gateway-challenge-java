@@ -313,6 +313,7 @@ For a production-ready implementation, I would consider:
 - Authentication and authorization
 - Retry resilience patterns
 - Prometheus and Grafana integration
+- Adding alerts
 
 ---
 
